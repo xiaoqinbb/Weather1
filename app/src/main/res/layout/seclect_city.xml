@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#267094"
+
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    tools:context=".SelectCity">
+
+
+    <LinearLayout
+        android:id="@+id/title_blank"
+        android:layout_width="match_parent"
+        android:layout_height="45.0dip"
+        android:orientation="horizontal"
+        android:background="#537D8D"
+       >
+        <ImageView
+            android:id="@+id/title_back"
+            android:layout_width="45.0dip"
+            android:layout_height="45.0dip"
+            android:layout_weight="1"
+            android:src="@drawable/back"
+            />
+        <TextView
+            android:id="@+id/title_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:layout_weight="15"
+            android:text="当前城市：北京"
+            android:textSize="20.0dip" />
+
+    </LinearLayout>
+
+    <EditText
+        android:id="@+id/search"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/title_blank"
+        android:layout_marginTop="10dp"
+        android:hint="请输入城市名搜索"
+        android:maxLines="1"
+        android:textSize="25dp"/>
+
+   <TextView
+       android:id="@+id/city_text"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:layout_margin="10dp"
+       android:text="所有城市"
+       android:textSize="20dp"
+       android:layout_below="@id/search"
+       />
+    <ListView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/cityListview"
+        android:layout_below="@id/city_text"
+        android:background="#267094" />
+
+</RelativeLayout>
